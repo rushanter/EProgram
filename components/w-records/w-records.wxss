@@ -1,0 +1,14 @@
+/* components/w-records/w-records.wxss */
+
+.records {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+.records > .item {
+  width: 48%;
+  position: relative;
+  margin-top: 16rpx;
+}
