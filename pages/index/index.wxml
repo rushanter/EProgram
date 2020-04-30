@@ -12,10 +12,10 @@
               scroll-top="{{topPosition}}"
               bindscroll="scrollPosition">
     <w-swiper banners="{{banners}}"/>
-    <w-recommend recommends="{{recommends}}" bind:imageLoad="onImageLoad"/>
+    <!-- <w-recommend recommends="{{recommends}}" bind:imageClick="imageClick"/> -->
     <!-- <w-feature/> -->
     <w-tab-control class='tab-control' titles="{{titles}}" bind:tabclick="tabClick"/>
-    <w-records records="{{records[currentType].list}}"/>
+    <w-records records="{{records[currentType].list}}" />
     <w-back-top bindtap="onBackTop" wx:if="{{showBackTop}}"/>
   </scroll-view> 
 </view>

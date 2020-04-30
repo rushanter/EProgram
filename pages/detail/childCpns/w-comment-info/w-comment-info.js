@@ -1,10 +1,12 @@
-// pages/index/childCpns/w-feature/w-feature.js
+// pages/detail/childCpns/w-comment-info/w-comment-info.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-
+    commentInfo: {
+      type: Object
+    }
   },
 
   /**

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "w-records": "/components/w-records/w-records"
+  }
+}

@@ -1,16 +1,29 @@
 <!--pages/home/childCpns/w-header/w-header.wxml-->
 <view class='header'>
   <view class='avatar'>
-    <image src="/image/home/avatar.png"/>
+    <image src="{{userImage}}" />
   </view>
   <view class='login-info'>
-    <view class='login'>登录/注册</view>
-    <view class='phone'>
-      <image src="/image/home/phone.png"/>
-      暂无绑定手机号
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+      <block wx:else>
+        <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image> -->
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
     </view>
+
+    <!-- <view class='phone'>
+      <image src="/image/home/phone.png" /> 暂无绑定手机号
+    </view> -->
   </view>
   <view class='arrow'>
-    <image src="/image/home/arrow-right.png"/>
+    <image src="/image/home/arrow-right.png" />
   </view>
 </view>
+
+<!-- <open-data type="userGender" lang="zh_CN"></open-data>
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+      <open-data type="userCity" lang="zh_CN"></open-data>
+      <open-data type="userProvince" lang="zh_CN"></open-data>
+      <open-data type="userCountry" lang="zh_CN"></open-data>
+      <open-data type="userLanguage" lang="zh_CN"></open-data> -->

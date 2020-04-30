@@ -1,7 +1,28 @@
 <!--pages/home/home.wxml-->
 <view class='home'>
-  <w-header/>
-  <w-info/>
-  <w-list-view infos="{{orderList}}"/>
+  <view class='header'>
+    <view class='avatar'>
+      <image src="{{userImage}}" />
+    </view>
+    <view class='login-info'>
+      <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+        <block wx:else>
+          <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image> -->
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+      </view>
+
+      <!-- <view class='phone'>
+      <image src="/image/home/phone.png" /> 暂无绑定手机号
+    </view> -->
+    </view>
+    <view class='arrow'>
+      <image src="/image/home/arrow-right.png" />
+    </view>
+  </view>
+  <!-- <w-header userInfo="{{userInfo}}" /> -->
+  <!-- <w-info/> -->
+  <!-- <w-list-view infos="{{orderList}}"/> -->
   <!-- <w-list-view infos="{{serviceList}}"/> -->
 </view>

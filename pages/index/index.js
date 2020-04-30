@@ -1,4 +1,4 @@
-// pages/home/home.js
+// pages/index/home.js
 import {
   getMultiData,
   getProduct
@@ -61,7 +61,8 @@ Page({
       })
     }).exec()
   },
-  onImageLoad() {
+  imageClick(event) {
+    console.log(event)
     wx.createSelectorQuery().select('.tab-control').boundingClientRect((rect) => {
       this.setData({
         tabControlTop: rect.top

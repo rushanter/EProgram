@@ -1,8 +1,8 @@
 <!--components/w-records-item/w-records-item.wxml-->
-<view class='records-item'>
-  <image class='image' src="{{item.image}}" mode="widthFix" />
+<view class='records-item' bindtap='itemClick'data-recordsid="{{recordsitem.id}}">
+  <image class='image' src="{{recordsitem.image || recordsitem.img || recordsitem.show.img}}" mode="widthFix" />
   <!-- <view class='desc-info'> -->
-  <view class='title'>{{item.title}}</view>
+  <view class='title'>{{recordsitem.title}}</view>
   <!-- <view class='info'> -->
   <!-- <text class='price'>¥{{item.price}}</text> -->
   <!-- <image class='icon' src="/assets/common/favor.png"/> -->

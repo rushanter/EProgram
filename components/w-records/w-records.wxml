@@ -1,6 +1,6 @@
 <!--components/w-records/w-records.wxml-->
 <view class="records">
   <block wx:for="{{records}}" wx:key="{{index}}">
-    <w-records-item class="item" item="{{item}}" />
+    <w-records-item class="item" recordsitem="{{item}}" />
   </block>
 </view>
